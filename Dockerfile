@@ -1,5 +1,5 @@
 FROM maven:3.8.7 as build
-COPY src/main/java/org/example/taskfordevop .
+COPY . .
 RUN mvn -B clean package -DskipTests
 
 FROM openjdk:17

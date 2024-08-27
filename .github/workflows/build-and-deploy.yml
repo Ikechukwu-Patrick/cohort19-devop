@@ -36,10 +36,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t ik20743/taskfordevop:latest .
+        run: docker build -t ike20743/taskfordevop:latest .
 
       - name: Push Docker image to Docker Hub
-        run: docker push ik20743/taskfordevop:latest
+        run: docker push ike20743/taskfordevop:latest
 
         #This step is commented out as it requires the use of an external service (AWS Elastic Beanstalk)
         #- name: Deploy to AWS Elastic Beanstalk

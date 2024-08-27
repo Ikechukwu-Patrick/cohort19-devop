@@ -23,7 +23,7 @@ public class UserController {
     @PostMapping("/register")
     public ResponseEntity<RegisterUserResponse> registerUser(@RequestBody RegisterUserRequests requests) {
         try {
-            RegisterUserResponse response = userService.register(requests);
+            RegisterUserResponse response = userService.registerUser(requests);
             return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (BaseException e) {
             RegisterUserResponse response = new RegisterUserResponse();

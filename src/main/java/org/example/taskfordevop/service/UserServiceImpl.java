@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public RegisterUserResponse register(RegisterUserRequests requests) {
+    public RegisterUserResponse registerUser(RegisterUserRequests requests) {
         if (userRepository.existsByEmail(requests.getEmail().strip())) {
             throw new BaseException("User already registered, just log in");
         }

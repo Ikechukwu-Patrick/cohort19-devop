@@ -42,3 +42,7 @@ jobs:
         run: docker push ike20743/taskfordevop:latest
 
         #This step is commented out as it requires the use of an external service (AWS Elastic Beanstalk)
+        #- name: Deploy to AWS Elastic Beanstalk
+        #  uses: aws-actions/amazon-elastic-beanstalk-deploy@v2
+        #  with:
+        #    accessKeyID: ${{ secrets.AWS_ACCESS_KEY_ID }}
